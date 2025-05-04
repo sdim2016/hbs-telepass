@@ -1,0 +1,41 @@
+Variable;Type;Definition
+client_id;Numeric;"This number identifies the customer being offered the insurance policy. It can be used to merge data between the ""Insurance Quotes"" and ""Transactions"" tabs."
+quotation_id;Numeric;Insurance policy quote ID. This number is different for each row.
+driving_type;Character;"This variable denotes the age group of the customer. It can take three values: less_than_23; between_23_and_25; and more_than_26"
+car_immatriculation_date;Date;Car registration date
+car_brand;Character;Brand of the car
+car_model;Character;Model of the car
+insurance_expires_at;Date;Date when current insurance expires, when available
+birth_date;Date;Date of birth of the customer, when available
+gender;Character;Gender of the customer, when available
+county;Character;County of residence of the customer, when available
+base_subscription;Date;Date when customer signed up for Telepass base subscription
+base_type;Character;"This variable can take two values: ""FA"" for a Telepass family subscription; ""OR"" for a Telepass company subscription"
+pay_subscription;Date;Date when customer signed up for TelepassPay subscription. If empty, the customer never signed up for a TelepassPay subscription.
+pay_cancellation;Date;"Date when customer canceled their TelepassPay subscription. If empty, the customer never signed up for a TelepassPay subscription. If equal to ""12/31/9998"" the subscription is currently active."
+premium_subscription;Date;Date when customer signed up for Telepass Premium subscription. If empty, the customer never signed up for a Telepass Premium subscription.
+premium_cancellation;Date;"Date when customer canceled their Telepass Premium subscription. If empty, the customer never signed up for a Telepass Premium subscription. If equal to ""12/31/9998"" the subscription is currently active."
+operating_system;Character;"Mobile operating system of the customer, when available. ""and"" stands for Android; ""ios"" stands for iOS"
+policy_quoted_at;Date;Date when the insurance policy was quoted to the customer
+broker_id;Numeric;Identifier of the insurance company offering the quote
+issued;Boolean;"This variable is equal to ""TRUE"" if the insurance policy quoted was purchased by the customer, ""FALSE"" otherwise"
+guarantees_purchased;Character;"If the insurance was purchased, this variable lists the details for the selected insurance (both required and optional). Each option is separated by the "" - "" symbol"
+guarantees_available;Character;"This variable lists all the insurance options that the quote offers. Each option is separated by the "" - "" symbol"
+roadside_assistance;Dummy;This variable takes value 1 if roadside assistance is included in the quote, 0 otherwise.
+driver_injury;Numeric;If the quote offers insurance for driver injury, this variable includes the price for that option. In Euros.
+basic_coverage;Numeric;This variable includes the premium for the minimum required insurance. It is equal to price_sale. In Euros.
+legal_protection;Numeric;If the quote offers additional legal protection, this variable includes the price for that option. In Euros.
+waive_right_compensation;Numeric;If the quote offers additional rights for driver, this variable includes the price for that option. In Euros.
+uninsured_vehicles;Numeric;If the quote offers additional protection in case of accidents with uninsured vehicles, this variable includes the price for that option. In Euros.
+protected_bonus;Numeric;If the quote offers additional protection for the driver, this variable includes the price for that option. In Euros.
+windows;Numeric;If the quote offers additional protection for car windows and windshields, this variable includes the price for that option. In Euros.
+natural_events;Numeric;If the quote offers additional protection in case of natural events, this variable includes the price for that option. In Euros.
+theft_fire;Numeric;If the quote offers additional protection in case of theft and fire, this variable includes the price for that option. In Euros.
+kasko;Numeric;If the quote offers additional protection for the driver, this variable includes the price for that option. In Euros.
+license_revoked;Numeric;If the quote offers additional protection in case the driver's license is revoked, this variable includes the price for that option. In Euros.
+collision;Numeric;If the quote offers additional protection in case of collisions, this variable includes the price for that option. In Euros.
+vandalism;Numeric;If the quote offers additional protection in case of damages due to vandalism, this variable includes the price for that option. In Euros.
+key_loss;Numeric;If the quote offers additional protection in case of loss of car keys, this variable includes the price for that option. In Euros.
+price_sale;Numeric;Insurance premium for the minimum required insurance, inclusive of any price discounts offered during the quote. In Euros.
+price_full;Numeric;Insurance premium for the minimum required insurance, excluding any price discounts offered during the quote. In Euros.
+discount_percent;Numeric;price discount offered. It is equal to (1 - price_sale/price_full)*100

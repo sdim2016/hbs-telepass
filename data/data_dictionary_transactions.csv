@@ -1,0 +1,7 @@
+Variable;Type;Definition
+client_id;Numeric;"This number identifies the Telepass customer. It can be used to merge data between the ""Insurance Quotes"" and ""Transactions"" tabs."
+year_month;Date;Year-month of activity
+service_type;Character;Type of service purchased
+telepass_pay;Dummy ;This variable takes value 1 if the service belongs to TelepassPay, while it takes value 0 if it belongs to the standard Telepass services (those that use the OBU).
+number_transactions;Numeric;Number of unique transactions in that given year-month-service category
+expenditures;Numeric;Total expenditures in that given year-month-service category. In Euros.
