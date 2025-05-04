@@ -36,8 +36,8 @@ This project aims to analyze Telepass customer data to predict the likelihood of
 │   └── assessing-prediction-accuracy-of-machine-learning-models.md
 ├── telepass_analysis.py # Initial analysis script (might be refactored/removed)
 ├── requirements.txt
-└── README.md
-└── SUMMARY.md
+├── README.md
+└── SUMMARY.md # Summary of modeling approaches and case reflection
 ```
 
 ## Data
@@ -52,13 +52,18 @@ This project aims to analyze Telepass customer data to predict the likelihood of
 
 1.  **Logistic Regression (`models/1-logistic-regression/`)**: 
     - A baseline model providing interpretable insights.
-    - Includes Python script (`.py`), Jupyter Notebook (`.ipynb`), findings (`.md`), and visualizations (`.png`).
+    - Includes Python script (`.py`), [Jupyter Notebook](models/1-logistic-regression/logistic_regression_model.ipynb), findings (`.md`), and visualizations (`.png`).
 2.  **Decision Trees (`models/2-decision-trees/`)**: 
     - Implemented model capturing non-linear relationships and feature interactions.
-    - Includes Python script (`.py`), Jupyter Notebook (`.ipynb`), findings (`.md`), and visualizations (`.png`).
+    - Includes Python script (`.py`), [Jupyter Notebook](models/2-decision-trees/decision_tree_model.ipynb), findings (`.md`), and visualizations (`.png`).
 3.  **Random Forests (`models/3-random-forests/`)**: 
     - Ensemble model leveraging multiple decision trees for improved performance.
-    - Includes Python script (`.py`), Jupyter Notebook (`.ipynb`), findings (`.md`), and visualizations (`.png`).
+    - Includes Python script (`.py`), [Jupyter Notebook](models/3-random-forests/random_forest_model.ipynb), findings (`.md`), and visualizations (`.png`).
+
+## Documentation
+
+- [SUMMARY.md](SUMMARY.md): Comprehensive summary of all modeling approaches, performance metrics, and strategic case reflection.
+- Each model directory contains a `README.md` explaining its specific contents and how to run it.
 
 ## Setup and Installation
 
@@ -103,9 +108,9 @@ jupyter lab
 ```
 
 Then navigate to the relevant model directory and open the corresponding notebook:
-- `models/1-logistic-regression/logistic_regression_model.ipynb`
-- `models/2-decision-trees/decision_tree_model.ipynb`
-- `models/3-random-forests/random_forest_model.ipynb`
+- [Logistic Regression Notebook](models/1-logistic-regression/logistic_regression_model.ipynb)
+- [Decision Tree Notebook](models/2-decision-trees/decision_tree_model.ipynb)
+- [Random Forest Notebook](models/3-random-forests/random_forest_model.ipynb)
 
 ## Requirements
 
@@ -163,6 +168,8 @@ The Random Forest model leverages ensemble methods to improve prediction accurac
 | Recall       | 63.0%               | 67.9%         | 46.0%         |
 | F1 Score     | 47.6%               | 52.5%         | 48.6%         |
 | ROC AUC      | 67.0%               | 74.5%         | 73.2%         |
+
+For a comprehensive analysis of all models and strategic recommendations, please refer to our [detailed SUMMARY document](SUMMARY.md).
 
 ### Key Findings
 
